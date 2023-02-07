@@ -48,7 +48,7 @@ int main()
 
     delete std2; // cleanup 
 
-    std2 = ptr; // this will create a garbage object 
+    std2 = ptr; // this will create a garbage object if we don't have the delete. 
 
 }
 
