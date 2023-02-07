@@ -3,36 +3,52 @@
 
 #include <iostream>
 using namespace std; 
+
+#include "Student.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+    /*std::cout << "Hello World!\n";
 
     int* p;
 
     int x = 10; 
 
-    p = &x; 
+    p = &x; */
 
    /* cout << x << endl;
     cout << *p << endl;
     cout << &x << endl;
     cout << p << endl;*/
 
-    int y = 20;
+    //int y = 20;
 
-    p = &y; 
+    //p = &y; 
 
    // cout << p << endl;
 
-    int* p2; 
+   // int* p2; 
 
     // How can I have p2 assigned to the address of the variable y: 
 
-    p2 = p;
+    /*p2 = p;
 
-    p2 = &y; 
+    p2 = &y; */
 
+    Student std1; 
 
+    Student* ptr = &std1; 
+
+    std1.setName("Jason");
+
+    (*ptr).setName("Jason");
+
+    ptr->setName("Jason");
+
+    Student* std2 = new Student;
+
+    delete std2; // cleanup 
+
+    std2 = ptr; // this will create a garbage object 
 
 }
 
