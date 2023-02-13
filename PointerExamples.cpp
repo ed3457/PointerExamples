@@ -50,6 +50,36 @@ int main()
 
     std2 = ptr; // this will create a garbage object if we don't have the delete. 
 
+
+    /*int ar[] = {1,2,3};
+
+    int ar2[5];*/
+
+    int size; 
+
+    cout << "Please enter the array's size: \n";
+    cin >> size;
+
+  //  int ar3[size]; the size must be constant for this to work
+
+    // dynamic arrays 
+
+    int* dynamicArray = new int[size];
+
+    //int* arrayPtr = dynamicArray; 
+
+    for (int i = 0;i < size;i++)
+    {
+        cout << "Please enter a new element \n";
+      cin >> dynamicArray[i];
+      /*  cin >> arrayPtr[0]; 
+        arrayPtr++;*/
+    }
+
+    delete[] dynamicArray;
+
+    dynamicArray = new int[20];
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
