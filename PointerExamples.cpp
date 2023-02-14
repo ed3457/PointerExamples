@@ -34,51 +34,76 @@ int main()
 
     p2 = &y; */
 
-    Student std1; 
+    //Student std1; 
 
-    Student* ptr = &std1; 
+    //Student* ptr = &std1; 
 
-    std1.setName("Jason");
+    //std1.setName("Jason");
 
-    (*ptr).setName("Jason");
+    //(*ptr).setName("Jason");
 
-    ptr->setName("Jason");
+    //ptr->setName("Jason");
 
-    Student* std2 = new Student;
+    //Student* std2 = new Student;
 
-    delete std2; // cleanup 
+    //delete std2; // cleanup 
 
-    std2 = ptr; // this will create a garbage object if we don't have the delete. 
+    //std2 = ptr; // this will create a garbage object if we don't have the delete. 
 
 
     /*int ar[] = {1,2,3};
 
     int ar2[5];*/
 
-    int size; 
+   /* int size; 
 
     cout << "Please enter the array's size: \n";
-    cin >> size;
+    cin >> size;*/
 
   //  int ar3[size]; the size must be constant for this to work
 
     // dynamic arrays 
 
-    int* dynamicArray = new int[size];
+   // int* dynamicArray = new int[size];
 
     //int* arrayPtr = dynamicArray; 
 
-    for (int i = 0;i < size;i++)
-    {
-        cout << "Please enter a new element \n";
-      cin >> dynamicArray[i];
-      /*  cin >> arrayPtr[0]; 
-        arrayPtr++;*/
+    //for (int i = 0;i < size;i++)
+    //{
+    //    cout << "Please enter a new element \n";
+    //  cin >> dynamicArray[i];
+    //  /*  cin >> arrayPtr[0]; 
+    //    arrayPtr++;*/
+    //}
+
+ /*   delete[] dynamicArray;
+
+    dynamicArray = new int[20];*/
+
+
+    // define an dynamic array of students:
+    int courseSize = 2; 
+    Student* courseMembers= new Student[courseSize];
+    // write a loop to initialize the students 
+    string name;
+    float gpa;
+    for (int i = 0; i < courseSize;i++)
+    {   
+        cin >> name;
+        courseMembers[i].setName(name);
+        cin >> gpa;
+        courseMembers[i].setGPA(gpa);
     }
 
-    delete[] dynamicArray;
+    for (int i = 0; i < courseSize;i++)
+    {
+       
+        cout<< courseMembers[i].getName()<<endl;
+      
+        cout<<  courseMembers[i].getGPA()<<endl;
 
-    dynamicArray = new int[20];
+        cout << "=====================\n";
+    }
 
 }
 

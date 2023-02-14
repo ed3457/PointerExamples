@@ -16,5 +16,6 @@ public:
 	string getName();
 
 	void setName(string n);
+	Student();
 };
 

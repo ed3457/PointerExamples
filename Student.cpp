@@ -19,3 +19,9 @@ void Student::setName(string n)
 {
 	name = n;
 }
+
+Student::Student()
+{
+	setGPA(0);
+	setName("not-set");
+}
